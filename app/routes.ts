@@ -8,9 +8,11 @@ export default [
     route("/join", "features/auth/pages/join-page.tsx"),
   ]),
 
-  route("/address_search","features/address_search/pages/address_search.tsx"),
-  route("/result","features/result/pages/result.tsx"),
-  route("/settings","features/settings/pages/settings.tsx"),
-  route("/history","features/history/pages/history.tsx"),
+  ...prefix("/my", [
+    route("/settings","features/my/pages/settings-page.tsx"),
+    route("/history","features/my/pages/history-page.tsx"),
+  ]),
+
+  route("/result","features/result/pages/result-page.tsx"),
   route("/test","features/test/test-page.tsx"),
 ] satisfies RouteConfig;

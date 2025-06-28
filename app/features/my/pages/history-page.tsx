@@ -1,4 +1,4 @@
-import type {Route} from "./+types/history";
+import type {Route} from "../../../../.react-router/types/app/features/history";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -7,6 +7,6 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function History() {
+export default function HistoryPage() {
   return <div>Search History</div>
 }

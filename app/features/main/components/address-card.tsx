@@ -11,7 +11,7 @@ interface AddressCardProps {
 
 export default function AddressCard({id, roadAddress, jibunAddress, zipCode}: AddressCardProps) {
   return (
-    <Link to={`/products/${id}`} className={"block"}>
+    <Link to={`/result`} className={"block"}>
       <Card className={"w-full flex flex-row items-center justify-between p-4 bg-transparent hover:bg-primary/10"}>
         <CardHeader className={"w-full"}>
           <CardTitle className={"text-md font-semibold leading-none tracking-tight"}>{zipCode}</CardTitle>

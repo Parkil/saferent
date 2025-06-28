@@ -48,7 +48,7 @@ export default function App() {
   return (
     <div>
       <Navigation
-        isLoggedIn={false}
+        isLoggedIn={true}
         hasNotifications={false}
         hasMessages={false}
       />

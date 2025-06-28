@@ -191,21 +191,9 @@ export default function Navigation({
               <DropdownMenuSeparator />
               <DropdownMenuGroup>
                 <DropdownMenuItem asChild className="cursor-pointer">
-                  <Link to="/my/dashboard">
-                    <BarChart3Icon className="size-4 mr-2" />
-                    Dashboard
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild className="cursor-pointer">
-                  <Link to="/my/profile">
-                    <UserIcon className="size-4 mr-2" />
-                    Profile
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild className="cursor-pointer">
                   <Link to="/my/settings">
                     <SettingsIcon className="size-4 mr-2" />
-                    Settings
+                    <span>설정</span>
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuGroup>
@@ -213,7 +201,7 @@ export default function Navigation({
               <DropdownMenuItem asChild className="cursor-pointer">
                 <Link to="/auth/logout">
                   <LogOutIcon className="size-4 mr-2" />
-                  Logout
+                  <span>로그아웃</span>
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
