@@ -1,31 +1,25 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "~/common/components/ui/card"
+import {Card, CardContent,} from "~/common/components/ui/card"
 import {Input} from "~/common/components/ui/input"
 import {Label} from "~/common/components/ui/label"
-import {cn} from "~/lib/utils"
 import {Button} from "~/common/components/ui/button";
-import React from "react";
+import React, {useState} from "react";
 import {Building2Icon, BuildingIcon, HouseIcon, LandmarkIcon} from "lucide-react";
+import AddressSearchDialog from "~/features/main/components/address-search-dialog";
 
 
-export function MainSearchForm({
-                            className,
-                            ...props
-                          }: React.ComponentProps<"div">) {
+export function MainSearchForm() {
+  const [open, setOpen] = useState(false)
+  const [address, setAddress] = useState("")
+
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div className={"flex flex-col gap-6"}>
       <Card>
         <CardContent className={"space-y-10"}>
           <Label htmlFor={"address"} className={"flex flex-col items-start"}>
             주소로 찾기
             <small className={"text-muted-foreground"}>원하시는 주소의 정보를 찾아보세요</small>
-            <Input placeholder={"주소를 입력해 주세요"} name={"address"} id={"address"}/>
-            <Button className="w-full" type="submit">
+            <Input placeholder={"주소를 입력해 주세요"} name={"address"} id={"address"} onChange={(e) => setAddress(e.target.value)} value={address}/>
+            <Button className="w-full" type="submit" onClick={() => setOpen(true)}>
               검색
             </Button>
           </Label>
@@ -57,6 +51,7 @@ export function MainSearchForm({
           </Label>
         </CardContent>
       </Card>
+      <AddressSearchDialog open={open} setOpen={setOpen} addressParam={address}/>
     </div>
   )
 }

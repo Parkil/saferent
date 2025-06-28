@@ -12,7 +12,7 @@ export default function Main() {
   return (
     <div className="flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="flex w-full max-w-2xl flex-col gap-6">
-        <MainSearchForm className={"items-center"}/>
+        <MainSearchForm/>
       </div>
     </div>
   )

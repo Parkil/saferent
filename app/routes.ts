@@ -12,4 +12,5 @@ export default [
   route("/result","features/result/pages/result.tsx"),
   route("/settings","features/settings/pages/settings.tsx"),
   route("/history","features/history/pages/history.tsx"),
+  route("/test","features/test/test-page.tsx"),
 ] satisfies RouteConfig;
